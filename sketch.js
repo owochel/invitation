@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1280, 960, WEBGL);
+  createCanvas(640, 480, WEBGL);
   capture = createCapture(VIDEO);
   capture.size(640, 480);
   capture.hide();
@@ -23,12 +23,12 @@ function setup() {
 function draw() {
 
   background(255);
-  image(capture, -640, -480, 640, 480);
+  image(capture, -320, -240, 640, 480);
   //filter(INVERT);
-  image(capture,0, -480, 640, 480);
-  let date = "Apr.25th - May.1st"
-  let loc = "Fisher Studio Art Building Lobby, Bard College, NY"
-  let title=".. Title .."
+ // image(capture,0, -480, 640, 480);
+  let date = "Apr.25th - Apr.30st"
+  let loc = "Bard Fisher Studio Art Building Entrance Hall"
+  let title="Shuang Cai"
 
   
   if (mouseX > 320 && mouseY<200) {
@@ -42,7 +42,7 @@ function draw() {
     rotateY(PI);
     text(date, 0,0);
     text(loc,-105,-20,textWidth(date),150)
-    text(title,-105,35,textWidth(date),150)
+    text(title,-110,30,textWidth(date),150)
     
   }else{
     let time = millis();
@@ -58,14 +58,14 @@ function draw() {
     fill(0,0,255)
     translate(0,-50,15)
     text(date, 10, 0);
-    text(loc,-110,-30,textWidth(date),150)
+    text(loc,-110,-20,textWidth(date),150)
     text(title,-110,30,textWidth(date),150)
    
     fill(255,0,0);
     translate(0,100,-30)
     rotateX(PI);
     text(date, 0, 0)
-    text(loc,-110,-30,textWidth(date),150)
+    text(loc,-110,-20,textWidth(date),150)
     text(title,-110,30,textWidth(date),150)
     pop();
   }
